@@ -1,0 +1,108 @@
+<!--STANDRD BOOTSTRAP AND STYLE.CSS-->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Summary of Latitude vs. Weather Systems</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!--REFERING THE THE CSS FILE-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!--MAIN PAGE NAVBAR-->
+<body class = "container-fluid m-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--WEBPAGE TITLE-->
+        <a class="navbar-brand" href="#">Meteorological Analysis of Weather Graphs</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!--HOMEPAGE-->
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <!--COMPARISON PAGE-->
+              <a class="nav-link" href="Resources/comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <!--DATA PAGE-->
+              <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <!--DROPDOWN ITEMS-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="Resources/wind.html">Windspeed</a>
+                <a class="dropdown-item" href="Resources/clouds.html">Cloudiness</a>
+                <a class="dropdown-item" href="Resources/humid.html">Humidity</a>
+                <a class="dropdown-item" href="Resources/temp.html">Max Temp</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+<div>
+  <!--ANCHOR PHOTO WITH DISCRIPTION-->
+  <div class = "container-fluid">
+      <div class = "row">
+          <div id="main-content" class = "col-md-6">
+              <h2>Summary: Latitude vs. Weather Systems</h1>
+                  <img src="Resources/assets/images/patterns.png" alt="Windspeed image" width="550px" height="310px" class="float-left" 
+                  style="height:500px;margin-right:10px">
+                      <p class="m-5 lh-lg class-padding">Using the OpenWeatherMap API, Data was pulled for cities all around the world. The purpose of this pull was to
+                          to be able to compare weather data from multiple cites. Data that was looked at included humidity, cloudiness, maximum temperature, and windspeed all against latitude. The first step was to 
+                          randomly generate latitudes and longitudes to create a list of 600+ cities. Then the API was used to pull the weather data at those locations. 
+                      </p>
+                      <p class="lh-lg">Once the data was pulled, Matplotlib was used to chart the information for 
+                          the various factors that were of interest. For each of the four factors (humidity, cloudiness, maximum temperature, and windspeed) scatter plots were created with the 
+                          latitude along the x-axis and the different factors on the y-axis. Each dot on the scatter plot represents a city's location and the corresponding weather data taken that day.  
+                      </p>
+          </div>
+          <!--SIDEBAR LINKS-->
+          <div id = "side-bar" class = "img-fluid col-lg-6">
+              <div class = "container-fluid justify-content-center">
+                  <div class ="row">
+                    <!--TITLE-->
+                      <h2 class = "text-center">Visualizations</h1>
+                      <div class = "col-lg-6">
+                        <!--LINKS IN SIDEBAR-->
+                          <a href="Resources/wind.html"><img src= "Resources/assets/images/wind.png" alt="Windspeed image" width="350" height= "300" class="float-right"/></a>
+                      </div>   
+                      <div class = "col-lg-6"> 
+                          <a href="Resources/clouds.html"><img src= "Resources/assets/images/cloud.png" alt="clouds image" width="350" height= "300" class="float-right"/></a>
+                      </div>
+                      <div class = "col-md-6">
+                          <a href="Resources/humid.html"><img src= "Resources/assets/images/humid.png" alt="Humidity image" width="350" height= "300" class="float-right"/></a>
+                      </div>    
+                      <div class = "col-md-6">
+                          <a href="Resources/temp.html"><img src= "Resources/assets/images/temp.png" alt="Max Temp image" width="350" height= "300" class="float-right"/></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+        
+<!--PULLED FROM WEEK 11 DAY 3 ACTIVITY 5-->
+        
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
